@@ -1,6 +1,5 @@
 package blog;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,13 +12,8 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column
 	private String name;
-	
-	@Column
 	private String title;
-	
-	@Column
 	private String text;
 
 	public Post() {

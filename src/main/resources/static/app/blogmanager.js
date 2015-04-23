@@ -61,8 +61,4 @@ function blogManager($resource, $timeout) {
 			posts.splice(posts.indexOf(post), 1);
 		});
 	}	
-	
-	
-	
-	
 }
