@@ -21,6 +21,8 @@ public class Empleado {
 	private String apellidos;
 	@Column
 	private String dni;
+	@Column
+	private boolean administrador;
 	
 	
 	@Column
@@ -29,10 +31,11 @@ public class Empleado {
 	public Empleado() {
 	}
 
-	public Empleado(Integer id, String nombre, String apellidos, GregorianCalendar fechaNac) {
+	public Empleado(Integer id, String nombre, String apellidos, boolean administrador, GregorianCalendar fechaNac) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.id = id;
+		this.administrador = administrador;
 		this.fechaNac = fechaNac;
 	}
 
@@ -59,11 +62,31 @@ public class Empleado {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+	
+	public String getDni() {
+		return dni;
+	}
+	
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+	
+	public void setAdministrador(boolean administrador) {
+		this.administrador = administrador;
+	}
+	
+	public GregorianCalendar getFechaNac() {
+		return fechaNac;
+	}
+	
+	public void setFechaNac(GregorianCalendar fechaNac) {
+		this.fechaNac = fechaNac;
+	}
 
 
 	@Override
 	public String toString() {
 		return "Empleado [id=" + id + ", name=" + nombre + ", apellidos="+ apellidos + 
-				", fecha nac=" + fechaNac + "]";
+				", fecha nac=" + fechaNac + ", administrador" + administrador + "]";
 	}
 }
