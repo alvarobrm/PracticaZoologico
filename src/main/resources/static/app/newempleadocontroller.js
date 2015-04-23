@@ -1,6 +1,6 @@
 angular.module("app").controller("NewEmpleadoController", NewEmpleadoController);
 
-NewPostController.$inject = ["blogManager", "$location"];
+NewEmpleadoController.$inject = ["blogManager", "$location"];
 
 function NewEmpleadoController(blogManager, $location) {
 

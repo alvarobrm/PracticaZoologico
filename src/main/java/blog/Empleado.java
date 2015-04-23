@@ -31,11 +31,10 @@ public class Empleado {
 	public Empleado() {
 	}
 
-	public Empleado(Integer id, String nombre, String apellidos, boolean administrador, GregorianCalendar fechaNac) {
+	public Empleado(Integer id, String nombre, String apellidos, GregorianCalendar fechaNac) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.id = id;
-		this.administrador = administrador;
 		this.fechaNac = fechaNac;
 	}
 
@@ -70,11 +69,7 @@ public class Empleado {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	
-	public void setAdministrador(boolean administrador) {
-		this.administrador = administrador;
-	}
-	
+		
 	public GregorianCalendar getFechaNac() {
 		return fechaNac;
 	}
