@@ -13,30 +13,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/empleados")
+@RequestMapping("/animales")
 public class AnimalRestController {
 
 	@Autowired
-	private AnimalRepository empleadoRepository;
+	private AnimalRepository animalRepository;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Animal> allEmpleados(Model model) {
-		return empleadoRepository.findAll();
+	public List<Animal> allAnimales(Model model) {
+		return animalRepository.findAll();
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Animal> addEmpleado(@RequestBody Animal empl) {
-		empleadoRepository.save(empl);		
-		return new ResponseEntity<>(empl,HttpStatus.CREATED);
+	public ResponseEntity<Animal> addAnimal(@RequestBody Animal animal) {
+		animalRepository.save(animal);		
+		return new ResponseEntity<>(animal,HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void deleteEmpleado(@PathVariable Integer id) {
-		empleadoRepository.delete(id);
+	public void deleteAnimal(@PathVariable Integer id) {
+		animalRepository.delete(id);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Animal getEmpleado(@PathVariable int id) {
-		return empleadoRepository.findOne(id);
+	public Animal getAnimal(@PathVariable int id) {
+		return animalRepository.findOne(id);
 	}
 }

@@ -7,5 +7,9 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/', { templateUrl : "templates/postlist.html" });
 	$routeProvider.when('/newpost', { templateUrl : "templates/newpost.html" });
 	$routeProvider.when('/post/:id', { templateUrl : "templates/post.html" });
+	
+	$routeProvider.when('/animallist', { templateUrl : "templates/animallist.html" });
+	$routeProvider.when('/newanimal', { templateUrl : "templates/newanimal.html" });
+	$routeProvider.when('/animal/:id', { templateUrl : "templates/animal.html" });
 
 }

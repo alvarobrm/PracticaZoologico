@@ -30,6 +30,14 @@ public class Animal {
 		this.fechaNac = fechaNac;
 	}
 
+	public GregorianCalendar getFechaNac() {
+		return fechaNac;
+	}
+
+	public void setFechaNac(GregorianCalendar fechaNac) {
+		this.fechaNac = fechaNac;
+	}
+
 	public Integer getId() {
 		return id;
 	}
