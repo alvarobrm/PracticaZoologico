@@ -1,0 +1,13 @@
+<div ng-controller="NewEmpleadoController as vm">
+	<form ng-submit="vm.addEmpleado(vm.newEmpleado)">
+		<b>Nombre:</b><br> <input type='text' ng-model="vm.newEmpleado.nombre" /><br>
+		<b>Apellidos:</b><br> <input type='text' ng-model="vm.newEmpleado.apellidos" /><br>
+		<b>DNI:</b><br> <input type='text' ng-model="vm.newEmpleado.dni" /><br>
+		<b>Dar permisos de administrador:</b><br> 
+		<input type="radio" ng-model="vm.newEmpleado.administrador" ng-value="false" />No<br>
+		<input type="radio" ng-model="vm.newEmpleado.administrador" ng-value="true" />Si<br>
+		<b>Fecha Nac:</b><br> <input type="date" ng-model="vm.newEmpleado.fechaNac" /><br>
+		
+		<br> <input type='submit' name='New' value="New" />
+	</form>
+</div>

@@ -1,0 +1,12 @@
+<div ng-controller="EmpleadoListController as vm">
+	<a href="#/newempleado">New Empleado</a>
+	
+	<a href="" ng-click="vm.reload()">Reload</a>
+	
+	<div ng-repeat="empleado in vm.empleados">
+	
+		<a href="/#/empleado/{{empleado.id}}">{{empleado.nombre}}</a>
+				
+		<button type="button" ng-click="vm.deleteEmpleado(empleado)">Delete</button>
+	</div>
+</div>
