@@ -1,8 +1,8 @@
 angular.module("app").controller("NewAnimalController", NewAnimalController);
 
-NewAnimalController.$inject = ["blogManager", "$location"];
+NewAnimalController.$inject = ["animalManager", "$location"];
 
-function NewAnimalController(blogManager, $location) {
+function NewAnimalController(animalManager, $location) {
 
 	var vm = this;
 	
@@ -18,7 +18,7 @@ function NewAnimalController(blogManager, $location) {
 		
 		vm.newAnimal = {};
 		
-		$location.path("/");
+		$location.path("/animallist");
 	};
 };
 
