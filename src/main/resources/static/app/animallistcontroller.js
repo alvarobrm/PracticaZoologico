@@ -1,8 +1,8 @@
 angular.module("app").controller("AnimalListController", AnimalListController);
 
-AnimalListController.$inject = ["blogManager", "$location"];
+AnimalListController.$inject = ["animalManager", "$location"];
 
-function AnimalListController(blogManager, $location) {
+function AnimalListController(animalManager, $location) {
 
 	var vm = this;
 	
@@ -12,12 +12,12 @@ function AnimalListController(blogManager, $location) {
 		
 	//Controller logic
 	
-	vm.animales = blogManager.getAnimales();
+	vm.animales = animalManager.getAnimales();
 	
 	//Controller actions
 
 	vm.deleteAnimal = function(animal) {
-		blogManager.deleteAnimal(animal);
+		animalManager.deleteAnimal(animal);
 	};
 	
 	vm.viewAnimal = function(animal) {
@@ -25,7 +25,7 @@ function AnimalListController(blogManager, $location) {
 	};
 	
 	vm.reload = function(animal) {
-		blogManager.reload().then(function(animales){
+		animalManager.reload().then(function(animales){
 			vm.animales = animales;
 		});
 	};

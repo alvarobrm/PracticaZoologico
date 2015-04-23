@@ -14,11 +14,11 @@ function NewAnimalController(animalManager, $location) {
 
 	vm.addAnimal = function(newAnimal) {
 		
-		blogManager.newAnimal(newAnimal);
+		animalManager.newAnimal(newAnimal);
 		
 		vm.newAnimal = {};
 		
-		$location.path("/animallist");
+		$location.path("/");
 	};
 };
 

@@ -1,8 +1,5 @@
 package blog;
 
-import java.util.GregorianCalendar;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,26 +12,22 @@ public class Animal {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column
 	private String nombre;
-	
-	@Column
-	private GregorianCalendar fechaNac;
+	private String fechaNac;
 
 	public Animal() {
 	}
 
-	public Animal(Integer id, String nombre, GregorianCalendar fechaNac) {
+	public Animal(String nombre, String fechaNac) {
 		this.nombre = nombre;
-		this.id = id;
 		this.fechaNac = fechaNac;
 	}
 
-	public GregorianCalendar getFechaNac() {
+	public String getFechaNac() {
 		return fechaNac;
 	}
 
-	public void setFechaNac(GregorianCalendar fechaNac) {
+	public void setFechaNac(String fechaNac) {
 		this.fechaNac = fechaNac;
 	}
 

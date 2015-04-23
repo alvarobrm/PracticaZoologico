@@ -1,8 +1,8 @@
 angular.module("app").controller("AnimalController", AnimalController);
 
-AnimalController.$inject = ["blogManager", "$routeParams"];
+AnimalController.$inject = ["animalManager", "$routeParams"];
 
-function AnimalController(blogManager, $routeParams) {
+function AnimalController(animalManager, $routeParams) {
 
 	var vm = this;
 	
@@ -12,7 +12,7 @@ function AnimalController(blogManager, $routeParams) {
 		
 	//Controller logic
 	
-	vm.animal = blogManager.getAnimal($routeParams.id);
+	vm.animal = animalManager.getAnimal($routeParams.id);
 
 };
 
