@@ -20,12 +20,12 @@ public class PostRestController {
 	private PostRepository postRepository;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Post> allPosts(Model model) {
+	public List<Animal> allPosts(Model model) {
 		return postRepository.findAll();
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Post> addPost(@RequestBody Post post) {
+	public ResponseEntity<Animal> addPost(@RequestBody Animal post) {
 		postRepository.save(post);		
 		return new ResponseEntity<>(post,HttpStatus.CREATED);
 	}
@@ -36,7 +36,7 @@ public class PostRestController {
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Post getPost(@PathVariable int id) {
+	public Animal getPost(@PathVariable int id) {
 		return postRepository.findOne(id);
 	}
 }
