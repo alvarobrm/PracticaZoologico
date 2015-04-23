@@ -1,0 +1,9 @@
+<div ng-controller="NewAnimalController as vm">
+	<form ng-submit="vm.addAnimal(vm.newAnimal)">
+		<b>Nombre:</b><br> <input type='text' ng-model="vm.newAnimal.nombre" /><br>
+		<b>Id:</b><br> <input type='text' ng-model="vm.newAnimal.id" /><br>
+		<b>Fecha Nac:</b><br> <input type="date" ng-model="vm.newAnimal.fechaNac" /><br>
+		
+		<br> <input type='submit' name='New' value="New" />
+	</form>
+</div>

@@ -1,0 +1,7 @@
+<div ng-controller="AnimalController as vm">
+	<a href="/#/">Back</a>
+	<h1>{{vm.animal.nombre}}</h1>
+	<p>{{vm.animal.id}}</p>
+	<p>{{vm.animal.fechaNac}}</p>
+	<button type="button" title="Delete" ng-click="vm.deleteAnimal(animal)">Delete</button>
+</div>
