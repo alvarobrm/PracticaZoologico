@@ -1,0 +1,8 @@
+<div ng-controller="EmpleadoController as vm">
+	<a href="/#/">Back</a>
+	<h1>{{vm.empleado.nombre}}</h1>
+	<p>{{vm.empleado.apellidos}}</p>
+	<p>{{vm.empleado.dni}}</p>
+	<p>{{vm.empleado.fechaNac}}</p>
+	<button type="button" title="Delete" ng-click="vm.deleteEmpleado(empleado)">Delete</button>
+</div>
