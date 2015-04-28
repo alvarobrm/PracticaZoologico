@@ -28,7 +28,7 @@ function animalManager($resource, $timeout) {
 		}
 
 		function reload(){
-			return PostResource.query(function(newanimales){
+			return AnimalResource.query(function(newanimales){
 				animales.length = 0;
 				animales.push.apply(animales, newanimales);
 			}).$promise;
