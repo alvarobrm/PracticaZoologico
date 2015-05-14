@@ -1,0 +1,12 @@
+<div ng-controller="PostListController as vm">
+	<a href="#/newpost">New Post</a>
+	
+	<a href="" ng-click="vm.reload()">Reload</a>
+	
+	<div ng-repeat="post in vm.posts">
+	
+		<a href="/#/post/{{post.id}}">{{post.title}} ({{post.name}})</a>
+				
+		<button type="button" ng-click="vm.deletePost(post)">Delete</button>
+	</div>
+</div>
