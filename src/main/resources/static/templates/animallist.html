@@ -1,0 +1,12 @@
+<div ng-controller="AnimalListController as vm">
+	<a href="#/newanimal">New Animal</a>
+	
+	<a href="" ng-click="vm.reload()">Reload</a>
+	
+	<div ng-repeat="animal in vm.animales">
+	
+		<a href="/#/animal/{{animal.id}}">{{animal.nombre}}</a>
+				
+		<button type="button" ng-click="vm.deleteAnimal(animal)">Delete</button>
+	</div>
+</div>
