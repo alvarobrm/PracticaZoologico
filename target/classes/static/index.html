@@ -3,13 +3,19 @@
 <html lang="es">
 <head>
 
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> </meta>
+
 	<!-- Start WOWSlider.com HEAD section -->
 		<link rel="stylesheet" type="text/css" href="engine0/style.css" />
 		<script type="text/javascript" src="engine0/jquery.js"></script>
 	<!-- End WOWSlider.com HEAD section -->
 	
+	<!-- Estilo letra de google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	
 	<!-- css -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="index_css.css" rel="stylesheet"/>
 	
 	<!-- scripts -->
 	
@@ -24,12 +30,16 @@
 	<script src="./app/animallistcontroller.js"></script>
 	<script src="./app/newanimalcontroller.js"></script>
 	<script src="./app/animalcontroller.js"></script>
+
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.8 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
 	
 </head>
 
 <body ng-app="app">
 
-	<h1>Zoológico URJC</h1>
+	<h1 id="tituloPrincipal">Zoológico URJC</h1>
 	
 	<nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -50,10 +60,10 @@
         <li class="active"><a href="#">Eventos <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Compra tu entrada</a></li>
         <li class="dropdown">
-          <a href="/#/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Animales <span class="caret"></span></a>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Animales <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/#/animallist">Animal List</a></li>
-            <li><a href="v">Another action</a></li>
+            <li><a href="/#/animallist">Lista de animales</a></li>
+            <li><a href="/#/newanimal">A�adir animal</a></li>
             <li><a href="/#/">Something else here</a></li>
             <li class="divider"></li>
             <li><a href="/#/">Separated link</a></li>
@@ -72,7 +82,7 @@
 	
 	<div ng-view></div>
 	
-	<p>Zoologico URJC - 2015</p>
+	<footer>Zoologico URJC - 2015</footer>
 	
 </body>
 </html>

@@ -1,7 +1,9 @@
 <div ng-controller="AnimalController as vm">
-	<a href="/#/">Back</a>
-	<h1>{{vm.animal.nombre}}</h1>
-	<p>{{vm.animal.id}}</p>
-	<p>{{vm.animal.fechaNac}}</p>
-	<button type="button" title="Delete" ng-click="vm.deleteAnimal(animal)">Delete</button>
+	<h1 id="tituloSecundario">{{vm.animal.nombre}}</h1>
+	<p id="tituloTerciario">Descripcion: {{vm.animal.descripcion}}</p>
+	<p id="tituloTerciario">Numero identificatorio: {{vm.animal.id}}</p>
+	<p id="tituloTerciario">Fecha de nacimiento: {{vm.animal.fechaNac}}</p>
+	<p id="tituloTerciario">Raza: {{vm.animal.raza}}</p>
+	<a type="button" id="botonconespacio" class="btn btn-default" title="Delete" ng-click="vm.borrarAnimal(animal)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Borrar</a>
+	<a type="button" id="botonconespacio" class="btn btn-default" href="/#/animallist"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Volver</a	>
 </div>

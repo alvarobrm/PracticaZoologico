@@ -46,6 +46,10 @@ function animalManager($resource, $timeout) {
 			}
 		}
 
+		function borrarAnimal(id) {
+			animales.deleteAnimal(id);
+		}
+		
 		function newAnimal(newAnimal) {
 			new AnimalResource(newAnimal).$save(function(animal) {
 				animales.push(animal);

@@ -14,13 +14,46 @@ public class Animal {
 	
 	private String nombre;
 	private String fechaNac;
+	private String descripcion;
+	private String raza;
 
 	public Animal() {
 	}
 
-	public Animal(String nombre, String fechaNac) {
+	
+
+	public Animal(Integer id, String nombre, String fechaNac,
+			String descripcion, String raza) {
+		super();
+		this.id = id;
 		this.nombre = nombre;
-		this.fechaNac = fechaNac;
+		this.fechaNac = fechaNac.substring(0,10);
+		this.descripcion = descripcion;
+		this.raza = raza;
+	}
+
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+
+
+	public String getRaza() {
+		return raza;
+	}
+
+
+
+	public void setRaza(String raza) {
+		this.raza = raza;
 	}
 
 	public String getFechaNac() {
@@ -28,7 +61,7 @@ public class Animal {
 	}
 
 	public void setFechaNac(String fechaNac) {
-		this.fechaNac = fechaNac;
+		this.fechaNac = fechaNac.substring(0,10);
 	}
 
 	public Integer getId() {
