@@ -1,0 +1,9 @@
+<div ng-controller="ProductoController as vm">
+	<h1 id="tituloSecundario">{{vm.producto.nombre}}</h1>
+	<p id="tituloTerciario">Descripcion: {{vm.producto.descripcion}}</p>
+	<p id="tituloTerciario">Numero identificatorio: {{vm.producto.id}}</p>
+	<p id="tituloTerciario">Cantidad en stock: {{vm.producto.cantidad}}</p>
+	<p id="tituloTerciario">Precio: {{vm.producto.precio}} €</p>
+	<a type="button" id="botonconespacio" class="btn btn-default" title="Delete" ng-click="vm.borrarProducto(producto)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Borrar</a>
+	<a type="button" id="botonconespacio" class="btn btn-default" href="/#/productolist"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Volver</a	>
+</div>

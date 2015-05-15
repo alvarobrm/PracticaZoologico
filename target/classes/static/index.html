@@ -30,6 +30,10 @@
 	<script src="./app/animallistcontroller.js"></script>
 	<script src="./app/newanimalcontroller.js"></script>
 	<script src="./app/animalcontroller.js"></script>
+	<script src="./app/productomanager.js"></script>
+	<script src="./app/productolistcontroller.js"></script>
+	<script src="./app/newproductocontroller.js"></script>
+	<script src="./app/productocontroller.js"></script>
 
 
     <!-- Angular Material Javascript now available via Google CDN; version 0.8 used here -->
@@ -58,17 +62,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Eventos <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Compra tu entrada</a></li>
+        <li><a href="/#/newentrada">Compra tu entrada</a></li>
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Animales <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="/#/animallist">Lista de animales</a></li>
             <li><a href="/#/newanimal">Añadir animal</a></li>
-            <li><a href="/#/">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="/#/">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="/#/">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Productos <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/#/productolist">Lista de productos</a></li>
+            <li><a href="/#/newproducto">Añadir producto</a></li>
           </ul>
         </li>
         <ul class="nav navbar-nav navbar-right">
