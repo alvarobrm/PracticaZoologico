@@ -1,23 +1,17 @@
 <div ng-controller="ProductoController as vm">
 
-	<div class="toolbar">
-		<div class="toolbar__left mr">
-            <a href="/#/" class="btn btn--l btn--white btn--icon" lx-ripple>
-                <i class="mdi mdi--arrow-back"></i>
-            </a>
-        </div>
-	
-		<span class="toolbar__label fs-title">{{vm.producto.nombre}}</span>
-	</div>
-	<div class="content">
-	<p id="tituloTerciario">Descripcion: {{vm.producto.descripcion}}</p>
-	<p id="tituloTerciario">Numero identificatorio: {{vm.producto.id}}</p>
-	<p id="tituloTerciario">Cantidad en stock: {{vm.producto.cantidad}}</p>
-	<p id="tituloTerciario">Precio: {{vm.producto.precio}} €</p>
 
-<div class="grid">
+
+	<h1 id="tituloPrimario">{{vm.producto.nombre}}</h1>
+	<p>{{vm.producto.id}}</p>
+	<p>{{vm.producto.descripcion}}</p>
+	<p>{{vm.producto.cantidad}}</p>
+	<p>{{vm.producto.precio}}</p>
+	
+	<div class="grid">
 		<a href="" type="submit" class="btn btn--m btn--blue btn--raised"
-			lx-ripple style="float: right; margin-top: 2em;" ng-click="vm.deleteProducto(vm.producto)>Borrar producto</a>
+			lx-ripple style="float: right; margin-top: 2em;" ng-click="vm.deleteProducto(vm.producto)">Delete</a>
 	</div>
 </div>
+	
 </div>

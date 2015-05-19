@@ -7,16 +7,26 @@ function AnimalController(animalManager, $routeParams) {
 	var vm = this;
 	
 	//View model properties
-	vm.animales = [];
+	
 	vm.animal = {};
 		
-	vm.animales = animalManager.getAnimales();
+	vm.animal = animalManager.getAnimal($routeParams.id);
 	//Controller logic
 	
-	vm.animal = animalManager.getAnimal($routeParams.id);
-
-	vm.borrarAnimal = function(animal) {
-		animalManager.borrarAnimal($routeParams.id);
+//Controller actions
+	
+	vm.deleteAnimal = function(animal) {
+		
+		LxNotificationService.confirm('Delete confirmation',
+				'Are you sure you want to delete this post?', 
+				{ cancel:'Cancel', ok:'Delete' }, 
+				function(answer)
+		        {
+		            if(answer === true){
+		            	blogAnimal.deleteAnimal(animal);
+		        		$location.path("/animallist");		            	
+		            }					
+		        });
 	};
-};
+}
 

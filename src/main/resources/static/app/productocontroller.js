@@ -1,8 +1,8 @@
 angular.module("app").controller("ProductoController", ProductoController);
 
-ProductoController.$inject = ["productoManager", "$routeParams", "$location", "LxNotificationService"];
+ProductoController.$inject = ["productoManager", "$routeParams", "$location"];
 
-function ProductoController(productoManager, $routeParams, $location, LxNotificationService) {
+function ProductoController(productoManager, $routeParams, $location) {
 
 	var vm = this;
 	
@@ -18,16 +18,13 @@ function ProductoController(productoManager, $routeParams, $location, LxNotifica
 	
 	vm.deleteProducto = function(producto) {
 		
-		LxNotificationService.confirm('Delete confirmation',
+		var answer = confirm('Delete confirmation',
 				'Are you sure you want to delete this post?', 
-				{ cancel:'Cancel', ok:'Delete' }, 
-				function(answer)
-		        {
+				'Cancel', 'Delete' ); 
 		            if(answer === true){
-		            	blogManager.deletePost(post);
-		        		$location.path("/");		            	
+		            	productoManager.deleteProducto(producto);
+		        		$location.path("/listproducto");		            	
 		            }					
-		        });
 	};
 	
 };
