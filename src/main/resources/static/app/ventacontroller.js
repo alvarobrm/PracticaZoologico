@@ -1,32 +1,30 @@
 angular.module("app").controller("VentaController", VentaController);
 
-VentaController.$inject = ["ventaManager", "$routeParams"];
+VentaController.$inject = ["ventaManager", "$routeParams", "$location"];
 
-function VentaController(ventaManager, $routeParams) {
+function VentaController(ventaManager, $routeParams, $location) {
 
 	var vm = this;
 	
 	//View model properties
-	
+
 	vm.venta = {};
 		
-	vm.venta = ventaManager.getVenta($routeParams.id);
 	//Controller logic
 	
+	vm.venta = ventaManager.getVenta($routeParams.id);
+
 //Controller actions
 	
 	vm.deleteVenta = function(venta) {
 		
-		LxNotificationService.confirm('Delete confirmation',
+		var answer = confirm('Delete confirmation',
 				'Are you sure you want to delete this venta?', 
-				{ cancel:'Cancel', ok:'Delete' }, 
-				function(answer)
-		        {
+				'Cancel', 'Delete' ); 
 		            if(answer === true){
-		            	blogVenta.deleteVenta(venta);
+		            	ventaManager.deleteVenta(venta);
 		        		$location.path("/ventalist");		            	
 		            }					
-		        });
 	};
-}
-
+	
+};

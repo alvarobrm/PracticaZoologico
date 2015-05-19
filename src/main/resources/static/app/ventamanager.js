@@ -45,10 +45,6 @@ function ventaManager($resource, $timeout) {
 				}
 			}
 		}
-
-		function borrarVenta(id) {
-			ventas.deleteVenta(id);
-		}
 		
 		function newVenta(newVenta) {
 			new VentaResource(newVenta).$save(function(venta) {

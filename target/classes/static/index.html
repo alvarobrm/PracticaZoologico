@@ -54,7 +54,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Eventos <span class="sr-only">(current)</span></a></li>
-        <li><a href="/#/newentrada">Compra tu entrada</a></li>
+        
+        <li class="dropdown">
+        	<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Ventas <span class="caret"></span></a>
+        	<ul class="dropdown-menu" role="menu">
+        		<li><a href="/#/ventalist">Lista de ventas</a></li>
+            	<li><a href="/#/newventa">Añadir venta</a></li>
+        	</ul>
+        </li>
+        
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Animales <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -91,14 +99,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
 
 	<script src="./app/routeconfig.js"></script>
+	
 	<script src="./app/animalmanager.js"></script>
 	<script src="./app/animallistcontroller.js"></script>
 	<script src="./app/newanimalcontroller.js"></script>
 	<script src="./app/animalcontroller.js"></script>
+	
 	<script src="./app/productomanager.js"></script>
 	<script src="./app/productolistcontroller.js"></script>
 	<script src="./app/newproductocontroller.js"></script>
 	<script src="./app/productocontroller.js"></script>
+	
 	<script src="./app/ventamanager.js"></script>
 	<script src="./app/ventalistcontroller.js"></script>
 	<script src="./app/newventacontroller.js"></script>
