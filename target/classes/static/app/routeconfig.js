@@ -13,4 +13,7 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/productolist', { templateUrl : "templates/productolist.html" });
 	$routeProvider.when('/newproducto', { templateUrl : "templates/newproducto.html" });
 	$routeProvider.when('/producto/:id', { templateUrl : "templates/producto.html" });
+
+
+
 }
