@@ -1,0 +1,58 @@
+body {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#formulario  {
+	padding-left: 4%;
+	padding-bottom: 2%;
+	padding-right: 25%;
+	padding-top: 2%;
+}
+
+#tituloPrincipal {
+	font-size: 5em;
+	padding: 2%;
+	color: #FCA205;
+    font-family: 'Lobster';
+}
+
+#tituloSecundario {
+	font-size: 3em;
+	padding: 2%;
+	color: grey;
+    font-family: 'Fredoka One', cursive;
+}
+
+#tituloTerciario {
+	font-size: 1.25em;
+	padding-left: 5%;
+	padding-bottom: 2%;
+    font-family: 'Fredoka One';
+}
+
+#botonconespacio {
+	margin-left: 4%;
+}
+
+footer {
+	position: static;
+	bottom: 0%;
+	text-align: center;
+	padding-top: 0.75%;
+	margin-right: -2%;
+	margin-left: -2%;
+	margin-top: 2%;
+	background-color: #d1d1d1;
+	color: grey;
+	height: 3em;
+	width: 104%;
+	border-color: #9f9f9f;
+	border-style: solid;
+	border-width: thin;
+}
+
+.caption  {
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
