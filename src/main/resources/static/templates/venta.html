@@ -1,0 +1,9 @@
+<div ng-controller="VentaController as vm">
+	<h1 id="tituloSecundario">{{vm.venta.nombre}} {{vm.venta.apellidos}}</h1>
+	<p id="tituloTerciario">Correo electrónico: {{vm.venta.email}}</p>
+	<p id="tituloTerciario">Numero identificatorio: {{vm.venta.id}}</p>
+	<p id="tituloTerciario">Fecha: {{vm.venta.fecha}}</p>
+	
+	<a type="button" id="botonconespacio" class="btn btn-default" title="Delete" ng-click="vm.deleteVenta(venta)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Borrar</a>
+	<a type="button" id="botonconespacio" class="btn btn-default" href="/#/ventalist"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Volver</a	>
+</div>
